@@ -1,0 +1,95 @@
+:root > *
+{
+--md-primary-bg-color:#FFB536;
+--md-primary-fg-color:#312e2c;
+
+--md-accent-fg-color:#FFB536;
+--md-accent-fg-color--transparent:#ffb5366e;
+--md-accent-bg-color:#ff00d4;
+
+--md-default-fg-color:#FFFEF8;
+--md-default-bg-color:#242220;
+
+--md-typeset-color:#FFFEF8;
+--md-typeset-a-color:#FFB536;
+
+--text:#FFFEF8;
+--h1:#ffe3b3;
+--text-faded:#e2e1d8;
+--text-nav:#ADADA9;
+--sidebar-bg:#302d2a;
+--main-color:#FFB536;
+
+.md-grid{
+    max-width: 1500px;
+}
+
+.md-sidebar--primary .md-sidebar__scrollwrap{
+    background-color:var(--sidebar-bg);
+}
+
+.md-nav--primary .md-nav__title::after {
+  box-shadow: none;
+}
+
+.md-typeset {
+    font-size: 0.7rem;
+}
+
+.md-typeset h1 {
+    color:var(--text);
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+.md-typeset h2 {
+    color:var(--text);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.md-typeset h3 {
+    font-weight: bold;
+}
+
+.md-typeset h4 {
+    font-weight: bold;
+}
+
+.md-typeset a {
+    color:var(--main-color);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    font-weight:600;
+}
+
+.md-typeset code {
+    background-color:#312e2b;
+    color:var(--text-faded);
+}
+
+.md-nav__title{
+    color:#d1c3aa;
+    font-size: 0.7rem;
+}
+
+.md-nav__link{
+    font-size: 0.6rem;
+}
+
+.md-nav__link--active{
+    color:var(--main-color);
+    font-weight: 600;
+}
+
+ol li::marker{
+    color:var(--text-faded);
+    font-weight:700;
+}
+
+ul li::marker{
+    color:var(--text-faded);
+    font-weight:700;
+}
+
+}
