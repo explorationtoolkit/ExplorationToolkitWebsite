@@ -1,4 +1,4 @@
-# Input Manager
+# :material-audio-input-rca: Input Manager
 
 The toolkit uses a custom input manager. It registers inputs via whatever system you wish, then outputs events that the toolkit's components can listen to.
 

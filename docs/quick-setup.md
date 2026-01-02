@@ -1,4 +1,6 @@
-# 🎬 Quick Setup
+icon: material/star-shooting-outline
+
+# :material-star-shooting-outline: Quick Setup
 
 ## Importing
 

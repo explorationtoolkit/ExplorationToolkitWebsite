@@ -1,4 +1,4 @@
-# ETSystemRegistry
+# :material-hub-outline: ETSystemRegistry
 
 The toolkit implements the [service locator pattern](https://en.wikipedia.org/wiki/Service_locator_pattern) in its framework, using concrete MonoBehaviours instead of service interfaces.
 
@@ -47,3 +47,16 @@ In this example, let's say we've created a **ScoreManager** component.
     ```csharp
     ETSystemRegistry.Instance.Get<ScoreManager>();
     ```
+
+## Existing Systems
+
+Many of the toolkit's managers and controllers are automatically registered with the ETSystemRegistry upon initialization. There are:
+
+* `InputManager`
+* `UIManager`
+* `GlobalAudioSource`
+* `InteractionController`
+* `PickupController`
+* `InspectController`
+* `CrosshairController`
+* `Inventory`

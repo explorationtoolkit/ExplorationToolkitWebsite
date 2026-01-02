@@ -17,10 +17,11 @@ theme:
     - navigation.instant
     - navigation.instant.progress
     - navigation.tracking
+    - navigation.indexes
     #- navigation.tabs
     #- navigation.tabs.sticky
     #- navigation.path
-    - navigation.sections
+    #- navigation.sections
     #- navigation.expand
     - search.suggest
     - content.code.copy
@@ -38,33 +39,40 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra_css:  
   - stylesheets/extra.css
 
 nav:
-  - "👋 Welcome": welcome.md
-  - "🎬 Quick Setup": quick-setup.md
+  - Welcome: welcome.md
+  - Quick Setup: quick-setup.md
   - Roadmap: roadmap.md
-  - Systems:
-    - Player:
-      - Player Controller: player/player-controller.md
-      - Input Manager: player/input-manager.md
-      - Player Components: player/player-components.md
-      - Crosshairs: player/crosshairs.md
-      - Custom Player Controller: player/custom-player-controller.md
-      - Player Stats: player/player-stats.md
-    - Interaction:
-      - Basic Setup: interaction/basic-setup.md
-      - Pickup Objects: interaction/pickup-objects.md
-      - Inspect Objects: interaction/inspect-objects.md
-    - Mechanisms:
-      - Doors: mechanisms/doors.md
-      - Unlockables: mechanisms/unlockables.md
+  - Player:
+    - player/index.md
+    - Player Controller: player/player-controller.md
+    - Input Manager: player/input-manager.md
+    - Player Components: player/player-components.md
+    - Crosshairs: player/crosshairs.md
+    - Custom Player Controller: player/custom-player-controller.md
+    - Player Stats: player/player-stats.md
+  - Interaction:
+    - interaction/index.md
+    - Basic Setup: interaction/basic-setup.md
+    - Pickup Objects: interaction/pickup-objects.md
+    - Inspect Objects: interaction/inspect-objects.md
+  - Mechanisms:
+    - mechanisms/index.md
+    - Doors: mechanisms/doors.md
+    - Unlockables: mechanisms/unlockables.md
   - Scripting:
+    - scripting/index.md
     - Custom Inspectors: scripting/custom-inspectors.md
     - ETSystemRegistry: scripting/etsystemregistry.md
   - Links:
+    - links/index.md
     - Play the Demo: https://daniel-buckley.itch.io/exploration-toolkit
     - YouTube Tutorials: https://www.youtube.com/playlist?list=PL7QZMl1mSodk7QgdeduMBVBzTE5YeZBIA
     - Asset Store: https://assetstore.unity.com/packages/slug/336992

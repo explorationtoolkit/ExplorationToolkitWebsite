@@ -1,7 +1,7 @@
 :root > *
 {
 --md-primary-bg-color:#FFB536;
---md-primary-fg-color:#312e2c;
+--md-primary-fg-color:#242220;
 
 --md-accent-fg-color:#FFB536;
 --md-accent-fg-color--transparent:#ffb5366e;
@@ -13,46 +13,85 @@
 --md-typeset-color:#FFFEF8;
 --md-typeset-a-color:#FFB536;
 
+--md-footer-bg-color: #242220;
+
 --text:#FFFEF8;
 --h1:#ffe3b3;
 --text-faded:#e2e1d8;
 --text-nav:#ADADA9;
---sidebar-bg:#302d2a;
+--sidebar-bg:#1D1D1D;
 --main-color:#FFB536;
 
 .md-grid{
-    max-width: 1500px;
+    max-width: 1700px;
+}
+
+.twemoji{
+    color:#A57C3E;
+    margin-right: 10px;
+}
+
+.md-main__inner{
+    margin-top: 0rem;
+}
+
+.md-content{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.md-sidebar__inner{
+    padding-left: 0.5rem;
+}
+
+.md-nav--primary .md-nav__title{
+    background: none;
+    box-shadow: none;
+    padding-top: 15px;
+}
+
+.md-nav--primary .md-nav__item{
+    background: none;
+    box-shadow: none;
+    padding-top: 8px;
+}
+
+.md-nav--primary .md-nav__list {
+    padding-bottom: 20px;
 }
 
 .md-sidebar--primary .md-sidebar__scrollwrap{
     background-color:var(--sidebar-bg);
 }
 
-.md-nav--primary .md-nav__title::after {
-  box-shadow: none;
-}
-
 .md-typeset {
     font-size: 0.7rem;
+    font-synthesis: none;
 }
 
 .md-typeset h1 {
     color:var(--text);
-    font-weight: bold;
-    font-size: 1.8em;
+    font-weight: 600;
+    font-size: 2.4em;
+    margin-bottom: 1em;
+
+    border-bottom: 2px solid #72706b;
+    padding-bottom: 0.3em;
 }
 
 .md-typeset h2 {
     color:var(--text);
-    font-weight: bold;
-    font-size: 1.5em;
+    font-weight: 600;
+    font-size: 1.7em;
 }
 
 .md-typeset h3 {
+    color:var(--text);
     font-weight: bold;
 }
 
 .md-typeset h4 {
+    color:var(--text);
     font-weight: bold;
 }
 
@@ -69,17 +108,35 @@
 }
 
 .md-nav__title{
-    color:#d1c3aa;
+    color:#ffffff;
     font-size: 0.7rem;
 }
 
 .md-nav__link{
+    color:#ADADA9;
     font-size: 0.6rem;
+    padding-bottom: 0px;
 }
 
 .md-nav__link--active{
     color:var(--main-color);
     font-weight: 600;
+}
+
+.md-header__title{
+    margin-left: 0.1rem;
+}
+
+.md-header__topic{
+    color:var(--text);
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+.md-typeset img{
+    outline: #7e6f60;
+    outline-width: 1px;
+    outline-style: solid;
 }
 
 ol li::marker{
@@ -92,4 +149,8 @@ ul li::marker{
     font-weight:700;
 }
 
+}
+
+html {
+    overflow-y: scroll;
 }

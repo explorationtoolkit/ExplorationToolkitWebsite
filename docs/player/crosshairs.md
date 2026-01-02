@@ -1,4 +1,4 @@
-# Crosshairs
+# :fontawesome-solid-crosshairs: Crosshairs
 
 You can create a dynamic crosshair that changes depending on what you're looking at, and the different types of interactions you may invoke.
 

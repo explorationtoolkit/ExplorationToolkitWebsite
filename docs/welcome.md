@@ -1,4 +1,6 @@
-# 👋 Welcome to the Exploration Toolkit
+icon: material/hand-wave-outline
+
+# :material-hand-wave-outline: Welcome to the Exploration Toolkit
 
 **Exploration Toolkit is a Unity asset which provides many exploration-related systems to add to your game.**
 

@@ -1,4 +1,4 @@
-# Basic Setup
+# :material-gesture-tap-hold: Basic Setup
 
 ## What is an interaction?
 

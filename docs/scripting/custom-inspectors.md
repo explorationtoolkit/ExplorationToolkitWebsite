@@ -1,4 +1,4 @@
-# Custom Inspectors
+# :material-list-box-outline: Custom Inspectors
 
 Many of the toolkit's components have associated custom editor scripts. This allows control of how the properties are rendered in the Inspector, as well as decoration, such as foldouts, colours, warning messages, and buttons.
 

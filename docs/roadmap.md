@@ -1,4 +1,6 @@
-# Roadmap
+icon: material/map-marker-path
+
+# :material-map-marker-path: Roadmap
 
 The toolkit is an ongoing project, with new features in development at all times.
 

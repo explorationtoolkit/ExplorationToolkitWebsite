@@ -1,4 +1,4 @@
-# Custom Player Controller
+# :material-hammer-wrench: Custom Player Controller
 
 You may not want to use the provided player controller, opting instead for your own solution, or a 3rd party one. The process has been made as smooth as possible, so simply follow these steps:
 
