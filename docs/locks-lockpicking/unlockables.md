@@ -1,3 +1,5 @@
+icon: material/key
+
 # :material-key: Unlockables
 
 Doors, crates, and many other things can be locked and require the player to do something in order to open them. That may be a key, a special item, or a lockpicking mini-game.

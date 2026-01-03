@@ -1,3 +1,5 @@
+icon: material/hammer-wrench
+
 # :material-hammer-wrench: Custom Player Controller
 
 You may not want to use the provided player controller, opting instead for your own solution, or a 3rd party one. The process has been made as smooth as possible, so simply follow these steps:
@@ -15,27 +17,33 @@ First, we need to create the player controller prefab, or modify an existing one
 
 ## 2. Detecting Inputs
 
-Exploration Toolkit uses a custom input manager. This doesn't mean you can't use 3rd party input systems such as Rewired — you can! Click here if you're not using Unity's built-in input system.
+Exploration Toolkit uses a custom input manager. This doesn't mean you can't use 3rd party input systems such as Rewired — you can! [Click here](input-manager.md#creating-a-module) if you're not using Unity's built-in input system.
 
-In your player script, you need to listen to the InputManager's events. Connect to whatever input events are needed by your player controller.
+In the player script, we first need to create a read-only proeprty which will fetch the InputManager from the [ETSystemRegistry](../scripting/etsystemregistry.md).
+
+```csharp
+private InputManager inputManager => ETSystemRegistry.Instance.Get<InputManager>();
+```
+
+Then we can connect to the input events we require.
 
 ```csharp
 void OnEnable ()
 {
-    InputManager.Instance.OnMove += OnMoveInput;
-    InputManager.Instance.OnRun += OnRunInput;
-    InputManager.Instance.OnCrouch += OnCrouchInput;
+    inputManager.OnMove += OnMoveInput;
+    inputManager.OnRun += OnRunInput;
+    inputManager.OnCrouch += OnCrouchInput;
 }
         
 void OnDisable ()
 {
-    InputManager.Instance.OnMove -= OnMoveInput;
-    InputManager.Instance.OnRun -= OnRunInput;
-    InputManager.Instance.OnCrouch -= OnCrouchInput;
+    inputManager.OnMove -= OnMoveInput;
+    inputManager.OnRun -= OnRunInput;
+    inputManager.OnCrouch -= OnCrouchInput;
 }
 ```
 
-Then, in their respective methods, do what you will with those inputs.
+In their respective methods, do what you will with those inputs.
 
 ```csharp
 void OnMoveInput (Vector2 input)

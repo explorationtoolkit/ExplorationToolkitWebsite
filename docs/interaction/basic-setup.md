@@ -1,3 +1,5 @@
+icon: material/gesture-tap-hold
+
 # :material-gesture-tap-hold: Basic Setup
 
 ## What is an interaction?

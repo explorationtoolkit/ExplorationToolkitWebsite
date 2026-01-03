@@ -1,4 +1,6 @@
-# :fontawesome-solid-people-carry: Pickup Objects
+icon: material/package-variant-closed
+
+# :material-package-variant-closed: Pickup Objects
 
 You can interact with an object to pick it up and hold it in your hands. These objects can be used as keys to open doors, weapons to shoot, puzzle pieces to place in the right position.
 

@@ -1,6 +1,8 @@
+icon: material/list-box-outline
+
 # :material-list-box-outline: Custom Inspectors
 
-Many of the toolkit's components have associated custom editor scripts. This allows control of how the properties are rendered in the Inspector, as well as decoration, such as foldouts, colours, warning messages, and buttons.
+Many of the toolkit's components have associated custom editor scripts. These control how the properties are rendered in the Inspector, as well as decoration, such as foldouts, colours, warning messages, and buttons.
 
 ## Modifying script variables
 
@@ -79,8 +81,11 @@ If you are creating your own components and wish to implement a component interf
 8. To draw a property, call the `DrawProperty` function, with the property name as the parameter. Optionally, you can send a second string parameter to override the name displayed.
 
     ```csharp
-    DrawProperty("itemName");
-    DrawProperty("pivot", "Pivot Point");
+    if(mainFoldout)
+    {
+        DrawProperty("itemName");
+        DrawProperty("pivot", "Pivot Point");
+    }
     ```
 
     ![](../images/scripting/custom-inspectors/0.png)
@@ -88,10 +93,41 @@ If you are creating your own components and wish to implement a component interf
 9. If you wish to have boxes separating properties within foldouts, add the `BeginBox` and `EndBox` functions.
 
     ```csharp
-    BeginBox();
-    DrawProperty("itemName");
-    DrawProperty("pivot", "Pivot Point");
-    EndBox();
+    if(mainFoldout)
+    {
+        BeginBox();
+        DrawProperty("itemName");
+        DrawProperty("pivot", "Pivot Point");
+        EndBox();W
+    }
     ```
 
     ![](../images/scripting/custom-inspectors/1.png)
+
+### Useful Functions
+
+The `ExplorationToolkitBaseInspector` parent class has a few handy functions to help you in setting up and decorating your custom inspector.
+
+`void AddProperty(string propertyName)`
+
+* Add a new serialized property to the properties dictionary.
+
+`void DrawProperty(string property, string labelOverride = "")`
+
+* Wrapper for `EditorGUILayout.PropertyField()`, with optional label override.
+
+`void BeginBox()`
+
+* Used to house similar properties. Make sure to cap it off with EndBox().
+
+`void EndBox()`
+
+* Called after the properties you wish to encapsulate in a box.
+
+`bool DrawFoldout(bool isOpen, string title)`
+
+* Draws a drop down section with custom label and colour. When clicked on it will open/close, displaying the contents inside.
+
+`void DrawETAudioClip (string property, string displayName)`
+
+* Draws our custom audio clip field with extra properties to adjust the playing of the sound.

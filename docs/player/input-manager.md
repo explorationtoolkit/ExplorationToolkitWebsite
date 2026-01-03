@@ -1,3 +1,5 @@
+icon: material/audio-input-rca
+
 # :material-audio-input-rca: Input Manager
 
 The toolkit uses a custom input manager. It registers inputs via whatever system you wish, then outputs events that the toolkit's components can listen to.
@@ -42,19 +44,29 @@ The InputManager singleton (`InputManager.Instance`) has properties you can acce
 
 ### Events
 
-* `OnMove (Vector2)`
-* `OnRun (InputPhase)`
-* `OnCrouch (InputPhase)`
-* `OnInteract (InputPhase)`
-* `OnUseHeldItem (InputPhase)`
-* `OnPlaceItem (InputPhase)`
-* `OnCameraZoom (InputPhase)`
+* `OnMove (Vector2)` *
+* `OnMovePersistent (Vector2)`
+* `OnRun (InputPhase)` *
+* `OnCrouch (InputPhase)` *
+* `OnInteract (InputPhase)` *
+* `OnUseHeldItem (InputPhase)` *
+* `OnPlaceItem (InputPhase)` *
+* `OnCameraZoom (InputPhase)` *
 * `OnLeftMouseButton (InputPhase)`
 * `OnRightMouseButton (InputPhase)`
 * `OnPause (InputPhase)`
 * `OnInventory (InputPhase)`
 
-The **InputPhase** enum has 3 possible values: `Pressed` `Released` `None`
+The **InputPhase** enum has 4 possible values:
+
+* `Pressed` - The input was triggered this frame.
+* `Released` - The input was cancelled this frame.
+* `None` - No change in the input.
+* `Disabled` - The input has been blocked from invoking its state.
+
+!!! note "*"
+
+    The events above with an asterisk will only invoke `InputPhase.Disabled` when `PlayerInputDisabled` is true. The `OnMove` event will invoke `Vector2.Zero`, so if you wish to still capture the movement input (WASD) when player input is disabled, listen to the `OnMovePersistent` event instead.
 
 ### Methods
 

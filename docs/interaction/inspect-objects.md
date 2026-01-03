@@ -1,4 +1,6 @@
-# :fontawesome-solid-magnifying-glass: Inspect Objects
+icon: material/magnify
+
+# :material-magnify: Inspect Objects
 
 You can interact with objects to inspect them. This will open the inspect screen, where you can rotate, zoom, and further interact with the object. This is good for puzzle games where you may want to read notes, or for implementing puzzle boxes.
 

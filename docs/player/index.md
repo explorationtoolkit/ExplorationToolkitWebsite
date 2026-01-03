@@ -1,5 +1,5 @@
 icon: material/walk
 
-# Player
+# :material-walk: Player
 
-These systems relate directly to the player.
+These are a collection of systems that relate to the player, and your input into the game.

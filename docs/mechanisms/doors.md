@@ -1,1 +1,3 @@
-# :fontawesome-solid-door-open: Doors
+icon: material/door
+
+# :material-door: Doors

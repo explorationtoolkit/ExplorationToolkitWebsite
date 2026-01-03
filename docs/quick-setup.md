@@ -10,7 +10,6 @@ When importing the asset, there are three main folders.
 * **Implementation** - Models, textures, audio, and demo scenes. Good for learning the toolkit and implementing already built systems.
 * **Documentation** - Links and files. You likely already get what this folder's about.
 
-
 ## Scene Setup
 
 There are a few objects you need/may need in the scene for certain systems to work. Click on the respective links to learn more about what they do and how to implement them.

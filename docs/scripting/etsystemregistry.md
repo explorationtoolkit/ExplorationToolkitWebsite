@@ -1,3 +1,5 @@
+icon: material/hub-outline
+
 # :material-hub-outline: ETSystemRegistry
 
 The toolkit implements the [service locator pattern](https://en.wikipedia.org/wiki/Service_locator_pattern) in its framework, using concrete MonoBehaviours instead of service interfaces.
@@ -18,9 +20,11 @@ This returns a reference to the UI Manager that's currently in the scene.
 
     The term *system* in the ETSystemRegistry encapsulates management components such as the UIManager and InputManager, as well as player-centric controllers such as the InspectController and PickupController.
 
-## Working with ETSystemRegistry
+## Working with the ETSystemRegistry
 
 If you are looking to add your own code to the toolkit or implement your own custom management scripts, I recommend integrating it within the current system. This will make your systems accessable without the need for its own direct dependancy or singleton.
+
+### Registering a new system
 
 In this example, let's say we've created a **ScoreManager** component.
 
@@ -48,9 +52,30 @@ In this example, let's say we've created a **ScoreManager** component.
     ETSystemRegistry.Instance.Get<ScoreManager>();
     ```
 
+### Referencing a system
+
+Convention in the toolkit is to not reference the system registry directly when needed, but rather create a read-only property in the script where it will be needed.
+
+```csharp
+private InputManager inputManager => ETSystemRegistry.Instance.Get<InputManager>();
+private UIManager uiManager => ETSystemRegistry.Instance.Get<UIManager>();
+```
+
+This allows you to write cleaner looking code, going from something like this:
+
+```csharp
+ETSystemRegistry.Instance.Get<UIManager>().CloseCurrentWindow();
+```
+
+To this:
+
+```csharp
+uiManager.CloseCurrentWindow();
+```
+
 ## Existing Systems
 
-Many of the toolkit's managers and controllers are automatically registered with the ETSystemRegistry upon initialization. There are:
+Many of the toolkit's managers and controllers are automatically registered with the ETSystemRegistry upon initialization.
 
 * `InputManager`
 * `UIManager`
@@ -59,4 +84,7 @@ Many of the toolkit's managers and controllers are automatically registered with
 * `PickupController`
 * `InspectController`
 * `CrosshairController`
+* `CameraFocusController`
 * `Inventory`
+* `NavigationMarkerManager`
+* `PauseMenu` *
