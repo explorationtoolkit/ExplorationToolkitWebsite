@@ -98,10 +98,11 @@ nav:
       - Camera Focusing: camera/camera-focusing.md
       - Camera Zoom: camera/camera-zoom.md
   - Resources:
-    - Scripting:
+    - Advanced:
       - scripting/index.md
-      - Custom Inspectors: scripting/custom-inspectors.md
       - ETSystemRegistry: scripting/etsystemregistry.md
+      - Global Audio Source: scripting/global-audio-source.md
+      - Custom Inspectors: scripting/custom-inspectors.md
       - Script Execution Order: scripting/script-execution-order.md
     - Help:
       - help/index.md

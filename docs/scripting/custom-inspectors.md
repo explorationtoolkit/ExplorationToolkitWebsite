@@ -4,6 +4,10 @@ icon: material/list-box-outline
 
 Many of the toolkit's components have associated custom editor scripts. These control how the properties are rendered in the Inspector, as well as decoration, such as foldouts, colours, warning messages, and buttons.
 
+|![](../images/scripting/custom-inspectors/before.png)|![](../images/scripting/custom-inspectors/after.png)|
+|:-:|:-:|
+|**Without Custom Inspector**|**With Custom Inspector**|
+
 ## Modifying script variables
 
 If you're modifying existing scripts, be careful, as by default adding new variables won't render them in the Inspector, and changing the names of existing variables may cause the Inspector to log errors.
