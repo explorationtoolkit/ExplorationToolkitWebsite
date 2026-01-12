@@ -2,7 +2,7 @@ icon: material/gesture-tap-hold
 
 # :material-gesture-tap-hold: Basic Setup
 
-## What is an interaction?
+## What is an Interaction?
 
 When you look at an object or hover your mouse over an object, certain things can happen. You could interact with a door to open it, click on a keypad button to enter the number, or interact with a lever to pull it.
 

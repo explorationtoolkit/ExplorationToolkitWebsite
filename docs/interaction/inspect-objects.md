@@ -17,7 +17,7 @@ The inspect controller works side by side with the [Interaction Controller](../i
 
 ![inspect controller component](../images/interaction/inspect-objects/0.png)
 
-## How it works
+## How it Works
 
 When you inspect an object, the following happens:
 
