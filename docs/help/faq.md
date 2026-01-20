@@ -30,3 +30,9 @@ icon: material/chat-question-outline
 ??? question "The inspect screen is not appearing when I inspect an object."
 
     Make sure you are adding the InspectCamera to your main camera's stack. This is an overlay camera, and it must be added to the camera stack to work.
+
+## General
+
+??? question "Is multiplayer supported?"
+
+    No, multiplayer is not supported. I'm focusing on additions and improvements to the toolkit with singleplayer as the core focus. I may introduce multiplayer support in the future, but it's not guaranteed.

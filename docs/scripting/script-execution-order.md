@@ -12,10 +12,11 @@ Since the toolkit's systems are designed around modularity, it has a heavy relia
 
 Here's a list of all the scripts which modify their execution order: 
 
-| Script                        | Execution Order   | Why           
-| -------------------------     | :-----------------: | -------------
-| `ETSystemRegistry`            | -10               | Dependency for most systems.
-| `InputManager`                | -5                | Dependency for many components.
-| `UIManager`                   | -2                | Dependency for many components.
-| `InteractionController`       | -1                | Many components subscribe the `OnInteract` event.
-| `NavigationMarkerManager`     | -1                | Navigation markers register themselves upon initialization.
+| Script                        | Order   | Why                                                           | Accessed Via              |
+| -------------------------     | :-----------------: | -------------------------------------------------------------|---------------------------|
+| `ETSystemRegistry`            | **-10**               | Dependency for most systems.                                  | Singleton
+| `ETGameSettings`              | **-10**               | Dependency for many components and systems.                   | Singleton
+| `InputManager`                | **-5**                | Dependency for many components.                               | ETSystemRegistry
+| `UIManager`                   | **-2**                | Dependency for many components.                               | ETSystemRegistry
+| `InteractionController`       | **-1**                | Many components subscribe the `OnInteract` event.             | ETSystemRegistry
+| `NavigationMarkerManager`     | **-1**                | Navigation markers register themselves upon initialization.   | ETSystemRegistry

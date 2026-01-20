@@ -97,13 +97,19 @@ nav:
       - camera/index.md
       - Camera Focusing: camera/camera-focusing.md
       - Camera Zoom: camera/camera-zoom.md
+    - UI:
+      - ui/index.md
+      - Menu: ui/menu.md
+      - Pause Screen: ui/pause-screen.md
   - Resources:
     - Advanced:
       - scripting/index.md
       - ETSystemRegistry: scripting/etsystemregistry.md
+      - ETGameSettings: scripting/etgamesettings.md
       - Global Audio Source: scripting/global-audio-source.md
       - Custom Inspectors: scripting/custom-inspectors.md
       - Script Execution Order: scripting/script-execution-order.md
+      - Libraries: scripting/libraries.md
     - Help:
       - help/index.md
       - Changelog: help/changelog.md
