@@ -20,13 +20,36 @@ This returns a reference to the UI Manager that's currently in the scene.
 
     The term *system* in the ETSystemRegistry encapsulates management components such as the UIManager and InputManager, as well as player-centric controllers such as the InspectController and PickupController.
 
+For all the management and controller systems you wish to implement, make their GameObjects a child of the **ExplorationToolkitManager**, as this is how they will be identified and automatically registered upon initialization.
+
+![](../images/scripting/etsystemregistry/0.png)
+
+Where are these systems?
+
+* **Management Systems** - `Core > Prefabs > Systems > Management` folder.
+* **Controller Systems** - `Core > Prefabs > Systems > Controllers` folder.
+
+
 ## Working with the ETSystemRegistry
 
 If you are looking to add your own code to the toolkit or implement your own custom management scripts, I recommend integrating it within the current system. This will make your systems accessable without the need for its own direct dependancy or singleton.
 
-### Registering a new system
+### Creating a new system
 
 In this example, let's say we've created a **ScoreManager** component.
+
+1. Have the class implement the `IRegisterableSystem` interface. The ETSystemRegistry will automatically find and register this system, if the component's GameObject is a child of it.
+
+    ```csharp
+    public class ScoreManager : MonoBehaviour, IRegisterableSystem
+    {
+
+    }
+    ```
+
+### Manually registering a system
+
+Creating a system via the way mentioned above works for systems that are initialized at runtime. Generally, this is the recommended method, but if you wish to spawn a system later on in the game, you can register/unregister a system like so. Do note, these classes don't require the `IRegisterableSystem` interface.
 
 1. In the `OnEnable` function, register the system with ETSystemRegistry.
 
@@ -52,6 +75,10 @@ In this example, let's say we've created a **ScoreManager** component.
     ETSystemRegistry.Instance.Get<ScoreManager>();
     ```
 
+!!! question "Why isn't this the default way?"
+
+    Registering a system manually can give you more precision over what and when a system is setup, but many components require subscribing to system events upon initialization. This can cause order of execution issues, so having every system registered via the `IRegisterableSystem` interface at runtime by the ETSystemRegistry, solves this problem.
+
 ### Referencing a system
 
 Convention in the toolkit is to not reference the system registry directly when needed, but rather create a read-only property in the script where it will be needed.
@@ -72,19 +99,3 @@ To this:
 ```csharp
 uiManager.CloseCurrentWindow();
 ```
-
-## Existing Systems
-
-Many of the toolkit's managers and controllers are automatically registered with the ETSystemRegistry upon initialization.
-
-* `InputManager`
-* `UIManager`
-* `GlobalAudioSource`
-* `InteractionController`
-* `PickupController`
-* `InspectController`
-* `CrosshairController`
-* `CameraFocusController`
-* `Inventory`
-* `NavigationMarkerManager`
-* `PauseMenu` *

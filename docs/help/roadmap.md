@@ -4,26 +4,21 @@ icon: material/map-marker-path
 
 The toolkit is an ongoing project, with new features in development at all times.
 
-## v1.1
+## In the Works
 
-**Estimated Release: January/February 2026**
+Here are a list of features I'm currently working on, which will hopefully be coming in the next update, or one not too far away.
 
-* **Lockpicking System** - Both tension (Skyrim) and pin (Oblivion) styles.
-* **Keycard System** - Use a keycard item to unlock doors.
-* **Menu System** - Main menu screens, including settings to adjust graphics, controls, etc.
+* **Revamped Player Controller** - The included player controller will be improved to make it a viable solution for many games. A state-based kinematic player controller. Here, the idea is that the toolkit's player controller will be the only solution you need for your exploration games.
 
-These are the main features added. There will be many more improvements and minor changes made as well in this update.
+* **Map Screen** - A full-screen map the player can explore, built on top of the minimap system.
 
-## v1.2
-
-**Estimated Release: TBA**
-
-* **Revamped Player Controller** - The included player controller will be improved to make it a viable solution for many games.
-* **Improved Mini-Map System** - Mini-maps will have more control over rendering and what information is displayed.
-* **Map Screen** - A full-screen map the player can explore.
+* **Improved Minimap System** - Minimaps will have more control over rendering and what information is displayed.
 
 ## Future Features
+
+Here are a list of features I'm planning on adding to the toolkit in the future. Some of these, I have begun work on, while others are only in concept at this time. This is not including overhauls of existing systems, as that will be a constant throughout development.
 
 * Another complete game.
 * Dialogue with captions.
 * Custom shaders.
+* Cutscenes.

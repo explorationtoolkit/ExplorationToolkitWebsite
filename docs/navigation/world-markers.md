@@ -4,7 +4,7 @@ icon: material/map-marker-radius-outline
 
 This system renders [Navigation Markers](navigation-markers.md) on-screen via a canvas. The markers track to their position, and can scale/fade depending on the distance.
 
-![example](../images/navigation/world-markers/example.png)
+![](../images/navigation/world-markers/example.png)
 
 ## Setup
 
@@ -16,8 +16,8 @@ This system is managed by the **NavigationWorldMarkerManager**. The prefab can b
 
 ## Marker Properties
 
-The **NavigationWorldMarkerManager** GameObject has a canvas as a child. This is where the world marker UI elements will be housed. If you want to change the look of these world markers, you can modify the **NavigationWorldMarkerUI** prefab in the `Core > Prefabs > UI` folder.
+The **NavigationWorldMarkerManager** GameObject has a canvas as a child. This is where the world marker UI elements will be housed. If you want to change the look of these world markers, you can modify the **NavigationWorldMarkerUI** prefab in the `Core > Prefabs > UI > Navigation` folder.
 
 In the Inspector, you can implement both **fade over distance** and/or **scale over distance**. You can set a start and end distance, as well as a falloff curve.
 
-(INCLUDE IMAGE OF THE COMPONENT IN THE INSPECTOR)
+![](../images/navigation/world-markers/component.png)

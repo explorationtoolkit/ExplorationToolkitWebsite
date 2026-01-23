@@ -2,24 +2,12 @@ icon: material/hammer-wrench
 
 # :material-hammer-wrench: Custom Player Controller
 
-You may not want to use the provided player controller, opting instead for your own solution, or a 3rd party one. The process has been made as smooth as possible, so simply follow these steps:
+You may not want to use the provided player controller, opting instead for your own solution, or a 3rd party one. Since the toolkit uses a custom input system, you'll need to connect your player controller to it. 
 
-## 1. Prefab Setup
+!!! note
+    Exploration Toolkit uses a custom input manager. This doesn't mean you can't use 3rd party input systems such as Rewired — you can! [Click here](input-manager.md#creating-a-module) if you're not using Unity's built-in input system.
 
-First, we need to create the player controller prefab, or modify an existing one.
-
-1. Go to the `Core > Prefabs > Managers` folder, and drag the **PlayerComponents** prefab in as a child of your controller.
-    * This acts as a middle man/manager for all your Exploration Toolkit controllers.
-
-2. Go to the `Core > Prefabs > Controllers` folder, and drag in all the controllers you want to use as a child of your prefab.
-    * Connect them as a reference to PlayerComponents.
-    * Refer to their individual pages to learn how to set them up individually.
-
-## 2. Detecting Inputs
-
-Exploration Toolkit uses a custom input manager. This doesn't mean you can't use 3rd party input systems such as Rewired — you can! [Click here](input-manager.md#creating-a-module) if you're not using Unity's built-in input system.
-
-In the player script, we first need to create a read-only proeprty which will fetch the InputManager from the [ETSystemRegistry](../scripting/etsystemregistry.md).
+In the player script, we first need to create a read-only property which will fetch the InputManager from the [ETSystemRegistry](../scripting/etsystemregistry.md).
 
 ```csharp
 private InputManager inputManager => ETSystemRegistry.Instance.Get<InputManager>();

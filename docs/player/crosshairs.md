@@ -8,27 +8,26 @@ You can create a dynamic crosshair that changes depending on what you're looking
 
 Crosshairs are controlled via the **CrosshairController** component and a canvas for rendering.
 
-I recommend using the **CrosshairController** prefab `Core > Prefabs > Player Systems`, as this has everything setup for you and is customizable. Drag that into your scene, ideally as a child of your player.
+You can find the prefab in the `Core > Prefabs > Player Systems` folder. Drag that into your scene as a child of the **ExplorationToolkitManager**.
 
-![crosshair controller object](../images/player/crosshairs/0.png)
+![](../images/player/crosshairs_setup.png)
 
-Your player controller should have a **PlayerComponents** object. Assign the crosshair controller to the respective property field.
+Selecting the CrosshairController, you can define some settings.
 
-![player components](../images/player/crosshairs/1.png)
+* **Use as Mouse Cursor** - When the mouse is enabled (e.g. when inspecting, in menus), the crosshair will act as the mouse cursor.
+* **Image** - The UI image component where the crosshair will be rendered.
+* **Default Crosshair** - The crosshair that will be visible by default. If you want no crosshair by default, set this to nothing.
 
-Then inside the crosshair controller, you can set the default crosshair.
-
-![setting the default crosshair](../images/player/crosshairs/2.png)
+![](../images/player/crosshairs/2.png)
 
 ## Creating a Crosshair
 
 Each crosshair type is stored in a **CrosshairData** ScriptableObject.
 
-1. In the Project window, right click and select: `Exploration Toolkit > Crosshair Data`.
-
+1. In the Project window, right click and select: `Create > Exploration Toolkit > Crosshair Data`.
 2. In the Inspector, assign a sprite and modify the properties as you see fit.
 
-![creating a crosshair](../images/player/crosshairs/3.png)
+![](../images/player/crosshairs_data.png)
 
 If you wish for this to be the default crosshair:
 
