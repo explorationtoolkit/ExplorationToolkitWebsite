@@ -28,9 +28,9 @@ theme:
 
 plugins:
   - search
-  #- redirects:
-  #    redirect_maps:
-  #      'index.md': 'welcome.md'
+  - redirects:
+      redirect_maps:
+        'index.md': 'welcome.md'
   - print-site:
       print_page_title: 'Exploration Toolkit'
       add_table_of_contents: true
