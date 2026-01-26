@@ -6,9 +6,9 @@ Navigation markers are points in 3D space which can denote a specific location (
 
 ## Navigation Marker Manager
 
-In order for the markers to work, we need to include the **NavigationMarkerManager** in our scene. The prefab is located in the `Core > Prefabs > Systems > Management` folder.
+In order for the markers to work, we need to include the **NavigationMarkerManager** in our scene. The prefab is located in the `Core > Prefabs > Systems > Management` folder. Make sure it's a child of the **ExplorationToolkitManager** object.
 
-This object acts as the registry for all markers in the scene. When a new one is initialized, it will automatically register itself with the manager, and unregister when destroyed. Navigation related systems, such as compass bars and minimaps, can read the list of markers to display them in their respective way.
+This object acts as the registry for all markers in the scene. When a new marker is initialized, it will automatically register itself with the manager, and unregister when destroyed. Navigation related systems, such as [Compass Bars](../navigation/compass-bar.md) and [Minimaps](../navigation/minimap.md), can read the list of markers to display them in their respective way.
 
 ## Creating a Navigation Marker
 

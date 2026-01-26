@@ -4,47 +4,69 @@ icon: material/magnify
 
 You can interact with objects to inspect them. This will open the inspect screen, where you can rotate, zoom, and further interact with the object. This is good for puzzle games where you may want to read notes, or for implementing puzzle boxes.
 
-YOUTUBE VIDEO
+## Setup
 
-All objects you wish to inspect must have a **Inspectable** component. You also need an **Inspect Controller**, which manages the overall system.
+### 1. Inspect Controller
 
-## Inspect Controller
+The **Inspect Controller** works in tandem with the [Interaction Controller](../interaction/basic-setup.md), checking to see what the player is looking at. If it's an **Inspectable**, then upon interaction, the inspect screen will open, and the object will be setup for inspection.
 
-The inspect controller works side by side with the [Interaction Controller](../interaction/basic-setup.md) to identify what you're looking at. If it's an inspectable, it can then be inspected. The controller can also be manually triggered to inspect something, e.g. in lockpicking.
+Add the **InspectController** prefab to your scene, located in the `Core > Prefabs > Systems > Controllers` folder, and make it a child of the **ExplorationToolkitManager**.
 
-1. Add the **InspectController** prefab to your scene, located in the `Core > Prefabs > Systems` folder.
-2. Reference this in your player's [Player Components](../player/player-components.md) object.
+![](../images/interaction/inspectobject.png)
 
-![inspect controller component](../images/interaction/inspect-objects/0.png)
+!!! question "Why make it a child of the ExplorationToolkitManager?"
+    The **ExplorationToolkitManager** is what registers all the systems we wish to use in the scene. Learn more about it [here](../setup/scene-setup.md#exploration-toolkit-manager).
 
-## How it Works
+In the Inspector, we can configure our inspect system.
 
-When you inspect an object, the following happens:
+* The `Inspect Camera` is what gets enabled when we enter the inspect screen. We'll go over how that works next.
+* The `Inspect Parent` is an empty GameObject which the Inspectable object will be made a child of.
+* You can also define the layer and rendering layer mask which will be applied to the Inspectable object. This is what the `Inspect Camera` renders.
+* You can adjust the camera controls for the inspect screen, field of views and rotate speeds.
+* The **GameWindow** component is used to define properties related to being in the inspect screen. Learn more [here](../ui/ui-manager.md).
 
-1. The inspect camera is enabled. This is an overlay camera which renders the inspected object, as well as corresponding UI.
-2. The inspectable object has its Tranform moved down to the inspect parent, and made a child of it.
-3. The inspectable and all of its children have their layer changed to *Inspect*. This is because the inspect camera only renders this layer.
-4. The inspectable and all of its children MeshRenderers have their rendering layers changed to *Light Layer 1*. This is because we have a separate directional light which illuminates only the inspected object.
+![](../images/interaction/inspectcontroller.png)
 
-Then, when the inspection is exited, the opposite happens; layers are reset and the object goes back to its original location/state.
+Now let's explore the children objects of the **InspectController** prefab.
 
-## Inspectable
+* **InspectOverlayCamera** - The camera which toggles when entering/exiting the inspect screen. This is an *Overlay* camera (so make sure to add it to your main camera's stack), which only renders the *Inspect* layer.
+* **InspectCanvas** - UI canvas with the background, text elements and buttons.
+* **InspectLight** - Directional light which illuminates only the inspected object. You can adjust the brightness, color, etc here.
+* **InspectParent** - The empty GameObject which the Inspectable object will become a child of. This is what we rotate when moving our mouse in the screen.
 
-The Inspectable component marks a GameObject as available to be inspected. This can be a note, puzzle box, important item, anything!
+![](../images/interaction/inspectcanvas.png)
 
-For an Inspectable to work, it requires 3 components:
+!!! note
+    If you have not already setup the *Inspect* layer, you must do so in order to use this system. The inspected object is rendered on a separate layer so it overlays everything else in the scene. Learn how to set that up [here](../setup/importing.md#layer-setup-required).
 
-1. **Interactable** - This allows the object to be looked at/hovered over, leading to a possible inspection.
+### 2. Inspectable
+
+The **Inspectable** component marks a GameObject as available to be inspected by the player. For an object to be inspected, it requires 3 components:
+
+1. **Interactable** - Used to detect when the player is looking at the object.
 2. **Inspectable** - The component we're learning about now.
-3. **Collider** - Any sort of collider for the interaction controller to detect.
+3. **Collider** - Any sort of collider to define the interaction bounds.
 
-![inspectable component](../images/interaction/inspect-objects/1.png)
+The component has a number of properties we can explore.
 
-Inside the Inspectable component, there are a few properties of note:
+* The `Inspect Description` is the text displayed at the bottom of the screen when inspecting.
+* By default, the object will rotate around its Transform's origin. You can create an empty GameObject child and assign that to `Inspect Pivot` to adjust it.
+* `Inspect Rotation` is the starting local rotation.
+* Some objects will appear to small or too big when inspecting, so you can adjust their `Inspect Scale`.
+* If you want the player to be able to inspect an object by interacting with it in the world, enable `Can Inspect in World`.
+* To mitigate any issues with collision, drag all the object's colliders into the `Colliders to Disable` list.
 
-* **Inspect Pivot** - You can change the rotation pivot point of the object with an empty GameObject.
-* **Inspect Rotation** - Starting rotation that will be set when inspecting the object. Showcase their good side.
-* **Inspect Scale** - Many objects are small and show up tiny on the screen when inspected. Adjust this accordingly.
-* **Colliders to Disable** - You have have colliders or triggers that could interfere when inspecting. These will be disabled while the inspection takes place.
+![](../images/interaction/inspectinspector.png)
 
-![inspectable properties](../images/interaction/inspect-objects/2.png)
+## Technical Overview
+
+There are a few steps in the process of inspection.
+
+1. The player interacts with an **Inspectable**, triggering an inspection.
+2. The inspect camera is enabled, displaying the canvas and other children objects.
+3. The **Inspectable** is made a child of the `Inspect Parent`.
+4. The **Inspectable** has its and all its childrens' layers changed to *Inspect*, so it will be renered by the inspect camera.
+    * The original layers are cached and will be reset upon exiting the inspection.
+5. The **Inspectable** has its and all its childrens' MeshRenderers rendering layers changed to `Rendering Layer Mask`. This makes it so the inspect light only illuminates the inspected object.
+6. Player input is disabled via the [UI Manager](../ui/ui-manager.md), and the mouse is enabled.
+7. Upon exiting, the reverse of these steps happen.

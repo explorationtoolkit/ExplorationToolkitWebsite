@@ -10,8 +10,8 @@ theme:
     text: Inter
 
   palette:
-    #primary: custom
     scheme: slate
+    #scheme: default
 
   features:
     - navigation.instant
@@ -28,7 +28,13 @@ theme:
 
 plugins:
   - search
-  - print-site
+  - redirects:
+      redirect_maps:
+        'index.md': 'welcome.md'
+  - print-site:
+      print_page_title: 'Exploration Toolkit'
+      add_table_of_contents: true
+      toc_depth: 6
 
 markdown_extensions:
   - pymdownx.blocks.caption
@@ -50,13 +56,13 @@ extra_css:
 nav:
   - Exploration Toolkit:
     - Welcome: welcome.md
-    - Quick Setup: quick-setup.md
+    #- Quick Setup: quick-setup.md
     - Setup:
       - setup/index.md
       - Importing: setup/importing.md
       - Scene Setup: setup/scene-setup.md
       - Demos: setup/demos.md
-      - HDRP Setup: setup/hdrp-setup.md
+      #- HDRP Setup: setup/hdrp-setup.md
   - Systems:
     - Player:
       - player/index.md
@@ -85,6 +91,7 @@ nav:
     - Inventory & Items:
       - inventory-items/index.md
       - Items: inventory-items/items.md
+      - Inventory Controller: inventory-items/inventory-controller.md
       - Hotbar Inventory: inventory-items/hotbar-inventory.md
       - Window Inventory: inventory-items/window-inventory.md
     - Navigation:
@@ -100,6 +107,7 @@ nav:
     - UI:
       - ui/index.md
       - Menu: ui/menu.md
+      - UI Manager: ui/ui-manager.md
       #- Pause Screen: ui/pause-screen.md
   - Resources:
     - Advanced:

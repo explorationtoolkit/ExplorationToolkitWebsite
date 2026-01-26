@@ -8,7 +8,7 @@ This system renders [Navigation Markers](navigation-markers.md) on-screen via a 
 
 ## Setup
 
-This system is managed by the **NavigationWorldMarkerManager**. The prefab can be found in the `Core > Prefabs > Systems > Management` folder. Drag that into your scene and you should be good to go!
+This system is managed by the **NavigationWorldMarkerManager**. The prefab can be found in the `Core > Prefabs > Systems > Management` folder. Drag that into your scene, as a child of the **ExplorationToolkitManager** and you should be good to go!
 
 !!! note
 

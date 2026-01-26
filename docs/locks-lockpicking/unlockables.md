@@ -16,24 +16,24 @@ There are two types of unlockables you can define:
 
 Used to unlock something with a key the player may be in possession of. This could be an old brass key, a keycard, a puzzle piece, etc.
 
-![](../images/locks-lockpicking/unlockables_0.png)
-
-* **Key Type** - What the player needs to have in order to unlock this (Pickupable, Item Data, Stat).
+* The `Key Type` is what the player needs to have in order to unlock this (Pickupable, Item Data, Stat).
 * There will then be a field to assign the respective key. For a Key Type of *Stat*, you can define an amount required to unlock, as well as an amount consumed upon unlock.
-* **Consume Key** - Upon unlocking, the key will be destroyed. Pickupable will be destroyed, item removed from inventory, stat reduced.
+* If `Consume Key` is enabled, then upon unlocking, the key will be destroyed - Pickupable will be destroyed, item removed from inventory, stat reduced.
+
+![](../images/locks-lockpicking/unlockables_0.png)
 
 ## Lockpickable
 
 Used to trigger [Lockpicking](../locks-lockpicking/lockpicking.md).
 
-![](../images/locks-lockpicking/unlockables_1.png)
-
-* **Difficulty** - How hard this will be to lockpick (easy, medium, hard, expert).
-* **Require Unlock Means** - Does the player need something in order to pick this lock?
-* **Lockpick Consume Condition** - At what point will the means be consumed? At the beginning of the attempt, or only upon failiure?
-* **Unlock Means Type** - What the player needs to have in order to pick this lock (Pickupable, Item Data, Stat).
+* The `Difficulty` determines how hard this will be to lockpick (easy, medium, hard, expert).
+* If `Require Unlock Means` is true, then the player will need something in order to pick this lock.
+* The `Lockpick Consume Condition` defines when the unlock means will be consumed. At the beginning of the attempt, or when the lockpick breaks?
+* The `Unlock Means Type` is what the player needs to have in order to pick this lock (Pickupable, Item Data, Stat).
 * There will then be a field to assign the respective means. For a Unlock Means Type of *Stat*, you can define an amount required, as well as an amount consumed.
-* **Consume Means** - Upon unlocking, the means will be destroyed. Pickupable will be destroyed, item removed from inventory, stat reduced.
+* If `Cosume Means` is enabled, then upon unlocking, the means will be destroyed - Pickupable will be destroyed, item removed from inventory, stat reduced.
+
+![](../images/locks-lockpicking/unlockables_1.png)
 
 ## Implementation
 
