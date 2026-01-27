@@ -4,6 +4,8 @@ icon: material/tag-outline
 
 In your game, you might want items for the player to pickup and add to their inventory. In the toolkit, items are represented by ScriptableObjects, and instanced with GameObjects. This method means item stacking, as of now, is not present in the toolkit. But for puzzle games where the player's progression can be tracked via what they are holding, this method works just fine.
 
+<iframe width="854" height="480" src="https://www.youtube.com/embed/9nOpR3l7XSc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Creating an Item
 
 ### 1. Item Data

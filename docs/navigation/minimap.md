@@ -6,6 +6,8 @@ Minimaps can help players navigate your game world, displaying the player, their
 
 ![](../images/navigation/minimaps/minimap.png)
 
+<iframe width="854" height="480" src="https://www.youtube.com/embed/23kqOB_sZpE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Setup
 
 ### 1. Map Texture

@@ -4,6 +4,8 @@ icon: material/door
 
 Doors are interactable objects which can open and close, be locked, unlocked with a key, or lockpicked. There's quite a bit to them, so let's look at how to set one up.
 
+<iframe width="854" height="480" src="https://www.youtube.com/embed/rt07XEeW2xc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Setup
 
 To create a door, attach the **Door** component to your GameObject. Where you put this component doesn't matter. I'd recommend it being on the root object of your door, and not the actual Transform that will swing.

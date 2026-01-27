@@ -8,6 +8,8 @@ A UI element which displays the facing direction of the player. If you have impl
 
 ![rpg bar](../images/navigation/compass-bar/rpg-bar.png)
 
+<iframe width="854" height="480" src="https://www.youtube.com/embed/FT0eeCKCipg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Setup
 
 There are a number of pre-made compass bar prefabs you can use in your game, and modify to fit the theme. These are found in the `Implementation > Prefabs > Navigation > Compass Bars` folder.

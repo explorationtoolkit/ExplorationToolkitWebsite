@@ -4,13 +4,15 @@ icon: material/lock-percent-outline
 
 Combination locks are interactables which allow the player to turn dials in order to enter the correct code. These can be useful for locking containers, doors, or any kind of puzzle element.
 
-![](../images/locks-lockpicking/combinationlock.png)
+<iframe width="854" height="480" src="https://www.youtube.com/embed/AO_FOe1ACJk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Setup
 
 ### 1. Prefab
 
 If you go to the `Implementation > Prefabs > Locks` folder, you will see the **CombinationLock** prefab. Drag that into your scene and put it wherever you wish. If it's purpose is to lock a container of sorts, I recommend making it a child of that object.
+
+![](../images/locks-lockpicking/combinationlock.png)
 
 !!! note
     By default these locks have the camera zoom in on them, so make sure you have correctly setup the [Camera Focusing](../camera/camera-focusing.md) system first.

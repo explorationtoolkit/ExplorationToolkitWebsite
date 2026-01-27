@@ -10,8 +10,8 @@ theme:
     text: Inter
 
   palette:
-    scheme: slate
-    #scheme: default
+    #scheme: slate
+    scheme: default
 
   features:
     - navigation.instant

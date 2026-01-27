@@ -4,6 +4,8 @@ icon: material/magnify
 
 You can interact with objects to inspect them. This will open the inspect screen, where you can rotate, zoom, and further interact with the object. This is good for puzzle games where you may want to read notes, or for implementing puzzle boxes.
 
+<iframe width="854" height="480" src="https://www.youtube.com/embed/ymIhazdEbPg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Setup
 
 ### 1. Inspect Controller

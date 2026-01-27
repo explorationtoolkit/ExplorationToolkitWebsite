@@ -4,6 +4,8 @@ icon: material/package-variant-closed
 
 You can interact with an object to pick it up and hold it in your hands. These objects can be used as keys to open doors, weapons to shoot, puzzle pieces to place in the right position, etc.
 
+<iframe width="854" height="480" src="https://www.youtube.com/embed/twvd5nhh8yI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Setup
 
 ### 1. Pickup Controller

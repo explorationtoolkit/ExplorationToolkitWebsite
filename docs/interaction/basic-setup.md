@@ -8,6 +8,8 @@ When you look at an object or hover your mouse over an object, certain things ca
 
 With the default controls, an interaction occurs when you're looking at an **Interactable** and click the left mouse button.
 
+<iframe width="854" height="480" src="https://www.youtube.com/embed/sjCAI96k6Oc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Setup
 
 ### 1. Interaction Controller

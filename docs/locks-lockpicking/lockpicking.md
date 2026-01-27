@@ -7,6 +7,8 @@ The toolkit features two lockpicking mini-games, which can be triggered upon int
 * **Tension Lockpicking** - Similar to the system in *Skyrim*.
 * **Pin Lockpicking** - Similar to the system in *The Elder Scrolls Online*.
 
+<iframe width="854" height="480" src="https://www.youtube.com/embed/Mn2cPqPWxr0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Setup
 
 1. Add one of the **LockpickingController**'s to your scene, found in the `Core > Prefabs > Systems > Controllers` folder, and make it a child of the **ExplorationToolkitManager**.

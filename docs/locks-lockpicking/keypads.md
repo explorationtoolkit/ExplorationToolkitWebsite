@@ -4,6 +4,8 @@ icon: material/dialpad
 
 Keypads are interactables which allow the player to input a numerical code via buttons. These can be useful for locked doors, safes, or any other kind of puzzle.
 
+<iframe width="854" height="480" src="https://www.youtube.com/embed/AO_FOe1ACJk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Setup
 
 ### 1. Prefab
