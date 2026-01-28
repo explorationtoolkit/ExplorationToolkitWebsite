@@ -18,7 +18,12 @@ Here are a list of features I'm currently working on, which will hopefully be co
 
 Here are a list of features I'm planning on adding to the toolkit in the future. Some of these, I have begun work on, while others are only in concept at this time. This is not including overhauls of existing systems, as that will be a constant throughout development.
 
+* Save system.
 * Another complete game.
 * Dialogue with captions.
 * Custom shaders.
 * Cutscenes.
+* Scene management and transitions.
+* Inspectable books with page turning.
+* Stealth, vision and audio detection system.
+* A larger collection of pre-built items, such as: telescopes, books, treasure, etc.
