@@ -4,6 +4,8 @@ icon: material/chart-box-outline
 
 Player stats can be used to keep track of coins, keys, items, and other collectables. A stat can also act as a key in unlocking [Doors](../mechanisms/doors.md), or as the means in allowing the player to attempt [Lockpicking](../locks-lockpicking/lockpicking.md).
 
+<iframe width="854" height="480" src="https://www.youtube.com/embed/6xbCfdZtJcY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Creating a Stat
 
 A stat is represented via a ScriptableObject. To create one, right click in the Project window and go `Create > Exploration Toolkit > Player Stat`. Give the file a name, then you can fill in the properties.
