@@ -10,8 +10,8 @@ theme:
     text: Inter
 
   palette:
-    #scheme: slate
-    scheme: default
+    scheme: slate
+    #scheme: default
 
   features:
     - navigation.instant
@@ -79,6 +79,8 @@ nav:
     - Mechanisms:
       - mechanisms/index.md
       - Doors: mechanisms/doors.md
+      - Computers: mechanisms/computers.md
+      - Security Cameras: mechanisms/security-cameras.md
       - Levers: mechanisms/levers.md
       - Buttons: mechanisms/buttons.md
     - Locks & Unlocking:

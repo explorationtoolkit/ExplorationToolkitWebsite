@@ -8,8 +8,6 @@ The toolkit is an ongoing project, with new features in development at all times
 
 Here are a list of features I'm currently working on, which will hopefully be coming in the next update, or one not too far away.
 
-* **Revamped Player Controller** - The included player controller will be improved to make it a viable solution for many games. A state-based kinematic player controller. Here, the idea is that the toolkit's player controller will be the only solution you need for your exploration games.
-
 * **Map Screen** - A full-screen map the player can explore, built on top of the minimap system.
 
 * **Improved Minimap System** - Minimaps will have more control over rendering and what information is displayed.

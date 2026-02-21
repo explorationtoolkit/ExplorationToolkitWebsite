@@ -12,4 +12,14 @@ There's a lot this toolkit has to offer, so it may be overwhelming to know where
 
 3. This documentation!
 
-<iframe width="854" height="480" src="https://www.youtube.com/embed/BsLdMwIf7qA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="854" height="480" src="https://www.youtube.com/embed/rsjPS3menm8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## New Update - v1.2
+
+Version 1.2 of the toolkit has recently been released. With it, comes some exciting new features:
+
+* An upgrade to the [Player Controller](/docs/player/player-controller.md). It's not a custom kinematic controller with run, jump, crouch, sliding, etc.
+
+* [Computers](/docs/mechanisms/computers.md) have been added, allowing the player to view messages, login, remotely interact with objects, and view...
+
+* [Security Cameras](/docs/mechanisms/security-cameras.md), which pan back and forth, can track targets, and be viewed on a computer.
