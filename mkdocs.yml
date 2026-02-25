@@ -125,6 +125,7 @@ nav:
       - Changelog: help/changelog.md
       - FAQ: help/faq.md
       - Roadmap: help/roadmap.md
+      #- Promises: help/promises.md
     - Links:
       - links/index.md
       - Play the Demo: https://daniel-buckley.itch.io/exploration-toolkit

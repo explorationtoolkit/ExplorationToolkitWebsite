@@ -4,7 +4,7 @@ icon: material/script-text-outline
 
 ## v1.2 - Major Update
 
-Released ???
+Released February 23, 2026
 
 * Added **computers**.
 * Added **security cameras**.
