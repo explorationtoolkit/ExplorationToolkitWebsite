@@ -139,3 +139,19 @@ With the object in your hand, you can now define specific points at which it can
 ![](../images/interaction/pickup-objects/7.png)
 <figcaption>This is the Pickupable for a chess piece, which can be placed on any place point with the tag "ChessPiece".</figcaption>
 </figure>
+
+## Throwing
+
+When an object is in your hand, you can choose to throw it instead of placing it down.
+
+1. Attach a **Rigidbody** component to the object (it will not work without one).
+2. Disable `Can Place Down`
+3. Enable `Can Throw`
+
+![](../images/interaction/pickupablethrow.png)
+
+There are a couple of settings you can adjust.
+
+* `Throw Force` is the impulse force applied when thrown.
+* `Local Throw Direction` is the direction relative to the camera's rotation that the force will be applied along.
+* `Random Torque Force` will add random angular force when thrown, spinning the object in the air.

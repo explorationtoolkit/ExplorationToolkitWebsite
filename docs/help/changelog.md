@@ -2,6 +2,12 @@ icon: material/script-text-outline
 
 # :material-script-text-outline: Changelog
 
+## v1.2.1 - Patch
+
+Released ???
+
+* Pickupable objects can now be thrown.
+
 ## v1.2 - Major Update
 
 Released February 23, 2026
